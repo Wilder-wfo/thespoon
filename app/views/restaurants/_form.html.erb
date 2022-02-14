@@ -1,0 +1,28 @@
+<% if false %>
+<%= form_for(@restaurant) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+  <%= f.label :rating %>
+  <%= f.number_field :rating %>
+  <%= f.submit %>
+<% end %>
+<% end %>
+
+<div class="container" pt-5>
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-6 col-lg-4 col-sm-4">
+      <%= form_for(@restaurant) do |f| %>
+        <div class="col-12 mb-3"><%= f.label :name %></div>
+        <div class="col-12 mb-3"><%= f.text_field :name %></div>
+        <div class="col-12 mb-3"><%= f.label :address %></div>
+        <div class="col-12 mb-3"><%= f.text_field :address %></div>
+        <div class="col-12 mb-3"><%= f.label :rating %></div>
+        <div class="col-12 mb-3"><%= f.number_field :rating %></div>
+        <%= f.submit %>
+        <%# <%= f.submit class: 'btn btn-primary', value: 'Nuevo Restaurante' %>
+      <% end %>
+    </div>
+  </div>
+</div>

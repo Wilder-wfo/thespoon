@@ -1,0 +1,17 @@
+<h1>Restaurants#show</h1>
+
+<div class="col-12 mb-3"><%= "<strong>Name:</strong> #{@restaurant.name}".html_safe %></div>
+<div class="col-12 mb-3"><%= "<strong>Address:</strong> #{@restaurant.address}".html_safe %></div>
+<div class="col-12 mb-3"><%= "<strong>Rating:</strong> #{@restaurant.rating}".html_safe %></div>
+
+<hr>
+<%= link_to restaurants_path do %>
+  <i class="fa fa-history"></i> Restaurantes
+<% end %> ||
+<%= link_to restaurant_path(@restaurant), method: :delete, data: { confirm: "Confirma borrar?" } do %>
+  <i class="fa fa-eraser"></i> Borrar
+<% end %> ||
+<%= link_to edit_restaurant_path(@restaurant) do %>
+  <i class="fa fa-pencil"></i> Editar restaurante
+<% end %>
+
