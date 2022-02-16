@@ -10,6 +10,7 @@
 <% end %>
 <% end %>
 
+<% if false %>
 <div class="container" pt-5>
   <div class="row justify-content-center">
     <div class="col-12 col-md-6 col-lg-4 col-sm-4">
@@ -21,6 +22,24 @@
         <div class="col-12 mb-3"><%= f.label :rating %></div>
         <div class="col-12 mb-3"><%= f.number_field :rating %></div>
         <%= f.submit %>
+        <%# <%= f.submit class: 'btn btn-primary', value: 'Nuevo Restaurante' %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<% end %>
+
+<div class="container" pt-5>
+  <div class="row justify-content-left">
+    <div class="col-12 col-lg-4 col-md-6">
+      <%= simple_form_for(@restaurant) do |f| %>
+
+        <div class="col-12 mb-3"><%= f.input :name %></div>
+
+        <div class="col-12 mb-3"><%= f.input :address %></div>
+
+        <div class="col-12 mb-3"><%= f.input :rating %></div>
+        <%= f.button :submit, class: "btn-primary col-12 btn-lg w-100" %>
         <%# <%= f.submit class: 'btn btn-primary', value: 'Nuevo Restaurante' %>
       <% end %>
     </div>

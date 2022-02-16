@@ -4,4 +4,7 @@
 <!-- app/views/restaurants/new.html.erb -->
 <%= render "form", restaurant: @restaurant %>
 
-<a href="/restaurants">Todos los Restaurantes </a>
+<hr>
+<%= link_to "/restaurants" do %>
+  <i class="fa fa-history"></i>Restaurantes
+<% end %>
